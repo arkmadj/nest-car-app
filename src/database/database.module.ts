@@ -9,7 +9,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 export class DatabaseModule {
   constructor(connection: Connection){
     if(connection.isInitialized){
-      console.log("Connected Successfully")
+      console.log("DB Connected Successfully")
     }
   }
 }
