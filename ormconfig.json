@@ -6,7 +6,7 @@
   "password": "",
   "database": "mycar",
   "entities": ["dist/**/entities/*{.ts,.js}"],
-  "": "",
-  "": "",
+  "synchronize": true,
+  "migrations": ["src/migrations/*{.ts,.js}"],
   "": "",
 }
