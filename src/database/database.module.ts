@@ -7,9 +7,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
   exports: [TypeOrmModule],
 })
 export class DatabaseModule {
-  constructor(connection: Connection){
-    if(connection.isInitialized){
-      console.log("DB Connected Successfully")
+  constructor(connection: Connection) {
+    if (connection.isInitialized) {
+      console.log('DB Connected Successfully');
     }
   }
 }
