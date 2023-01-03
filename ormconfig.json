@@ -1,0 +1,12 @@
+{
+  "type": "mysql",
+  "host": "localhost",
+  "port": "",
+  "username": "",
+  "password": "",
+  "database": "",
+  "entities": "",
+  "": "",
+  "": "",
+  "": "",
+}
