@@ -7,6 +7,7 @@ import { DataSource } from 'typeorm';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { ComponentsModule } from './components/components.module';
+import { Car } from './components/cars/entities/cars';
 
 @Module({
   imports: [
@@ -17,7 +18,7 @@ import { ComponentsModule } from './components/components.module';
       username: 'root',
       password: 'root1234',
       database: 'mycar',
-      entities: [],
+      entities: [Car],
       synchronize: true,
     }),
     GraphQLModule.forRoot<ApolloDriverConfig>({
