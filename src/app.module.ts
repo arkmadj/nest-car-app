@@ -21,8 +21,8 @@ import { ComponentsModule } from './components/components.module';
       synchronize: true,
     }),
     GraphQLModule.forRoot<ApolloDriverConfig>({
-      playground: process.env.NODE_ENV === 'developement' || false,
-      debug: process.env.NODE_ENV === 'development' || false,
+      playground: true,
+      debug: true,
       driver: ApolloDriver,
       autoSchemaFile: true,
     }),
