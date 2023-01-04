@@ -1,4 +1,12 @@
-import { Injectable } from '@nestjs/common';
+import { Query, Resolver } from '@nestjs/graphql';
+import { CarsService } from './cars.service';
 
-@Injectable()
-export class CarsService {}
+@Resolver()
+export class CarsResolver {
+  constructor(private carsService: CarsService) {}
+
+  @Query((returns) => String)
+  public async cars() {
+    return 'Hello and welcome to MyCar shop.';
+  }
+}
