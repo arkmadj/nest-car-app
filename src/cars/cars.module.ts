@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { CarsService } from './cars.resolver';
+import { CarsService } from './cars.service';
 
 @Module({
   imports: [CarsService],
