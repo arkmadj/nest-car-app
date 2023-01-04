@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
-import { CarService } from './cars.resolver';
+import { CarsService } from './cars.resolver';
 
 @Module({
-  imports: [CarService],
-  exports: [CarService],
+  imports: [CarsService],
+  exports: [CarsService],
 })
-export class CarModule {}
+export class CarsModule {}
