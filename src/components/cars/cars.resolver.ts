@@ -1,4 +1,4 @@
-import { Query, Resolver } from '@nestjs/graphql';
+import { Mutation, Query, Resolver } from '@nestjs/graphql';
 import { CarsService } from './cars.service';
 import { Car } from './entities/cars';
 
@@ -12,4 +12,8 @@ export class CarsResolver {
       throw err;
     });
   }
+
+  @Mutation(returns => Car)
+  public async car(): Promise<Car>{}
+
 }
