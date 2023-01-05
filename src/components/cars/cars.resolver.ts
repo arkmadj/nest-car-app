@@ -15,7 +15,9 @@ export class CarsResolver {
   }
 
   @Mutation((returns) => Car)
-  public async car(@Args('newCarData') newCarData: NewCarInput): Promise<Car> {
+  public async addNewCar(
+    @Args('newCarData') newCarData: NewCarInput,
+  ): Promise<Car> {
     return await this.carsService.addCar(newCarData).catch((err) => {
       throw err;
     });
