@@ -14,7 +14,10 @@ export class CarsResolver {
     });
   }
 
-  @Mutation(returns => Car)
-  public async car(@Args('newCarData') newCarData: NewCarInput): Promise<Car>{}
-
+  @Mutation((returns) => Car)
+  public async car(@Args('newCarData') newCarData: NewCarInput): Promise<Car> {
+    return await this.carsService.addCar(newCarData).catch((err) => {
+      throw err;
+    });
+  }
 }
