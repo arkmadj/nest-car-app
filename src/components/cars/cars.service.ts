@@ -15,4 +15,6 @@ export class CarsService {
       throw new InternalServerErrorException();
     });
   }
+
+  public async addCar(): Promise<Car>{}
 }
