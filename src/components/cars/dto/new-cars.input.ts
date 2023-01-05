@@ -3,16 +3,13 @@ import { Field, InputType, Int } from '@nestjs/graphql';
 @InputType()
 export class NewCarInput {
   @Field()
-  id: string;
-
-  @Field()
   name: string;
 
   @Field((type) => Int)
-  dailyPrice: number;
+  monthlyPrice: number;
 
   @Field((type) => Int)
-  monthlyPrice: number;
+  dailyPrice: number;
 
   @Field()
   mileage: string;
