@@ -13,7 +13,7 @@ export class NewCarInput {
 
   @Field((type) => Int)
   @Max(2000)
-  @Min(10, { message: 'Daily price cannt be that low' })
+  @Min(10, { message: 'Daily price cann't be that low' })
   dailyPrice: number;
 
   @Field()
